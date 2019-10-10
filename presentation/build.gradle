@@ -29,5 +29,9 @@ dependencies {
 
     implementation project(':core')
     
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation "androidx.appcompat:appcompat:$app_compat_version"
+
+    //JUnit
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$junit_ext_version"
 }

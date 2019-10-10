@@ -24,11 +24,15 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(':core')
-    
+
     //UI
     implementation "androidx.appcompat:appcompat:$app_compat_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
-    
+
+    //JUnit
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$junit_ext_version"
+
     //Espresso
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
 }
