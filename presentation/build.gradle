@@ -28,6 +28,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(':core')
+    implementation project(':local')
     
     implementation "androidx.appcompat:appcompat:$app_compat_version"
 

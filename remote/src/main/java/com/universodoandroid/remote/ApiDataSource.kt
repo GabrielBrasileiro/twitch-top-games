@@ -9,11 +9,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class ApiDataSource(
-    private val url: String,
-    private val token: String,
-    private val accept: String
-) {
+internal class ApiDataSource(private val url: String) {
 
     private val timeOut: Long = 30
 
@@ -21,7 +17,7 @@ class ApiDataSource(
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
 
-        val authenticator = TokenAuthenticator(token, accept)
+        val authenticator = TokenAuthenticator()
         val httpClient = OkHttpClient.Builder()
 
         httpClient.authenticator(authenticator)
