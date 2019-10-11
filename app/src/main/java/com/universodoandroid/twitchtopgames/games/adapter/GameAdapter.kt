@@ -7,11 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import com.universodoandroid.core.show
+import com.universodoandroid.presentation.dto.GameDto
 import com.universodoandroid.twitchtopgames.R
-import com.universodoandroid.twitchtopgames.games.dto.GameDto
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.game_item.*
-import java.lang.Exception
 
 class GameAdapter(
     private val games: List<GameDto>,
