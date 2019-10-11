@@ -27,7 +27,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(':core')
-    implementation project(':remote')
+    implementation project(':presentation')
 
     //UI
     implementation "androidx.appcompat:appcompat:$app_compat_version"

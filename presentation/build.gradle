@@ -29,8 +29,12 @@ dependencies {
 
     implementation project(':core')
     implementation project(':local')
-    
+
+    //UI
     implementation "androidx.appcompat:appcompat:$app_compat_version"
+
+    //Lifecycle
+    implementation "android.arch.lifecycle:extensions:$life_cycle_extension_version"
 
     //JUnit
     testImplementation "junit:junit:$junit_version"

@@ -1,7 +1,9 @@
 package com.universodoandroid.twitchtopgames
 
 import android.app.Application
-import com.universodoandroid.remote.di.injectRemoteModules
+import com.universodoandroid.presentation.di.injectLocalModule
+import com.universodoandroid.presentation.di.injectPresentationModules
+import com.universodoandroid.presentation.di.injectRemoteModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -18,7 +20,7 @@ class TwitchTopGamesApplication : Application() {
         startKoin {
             androidLogger(Level.DEBUG)
             androidContext(applicationContext)
-            injectRemoteModules()
+            modules(listOf(injectLocalModule(), injectRemoteModule(), injectPresentationModules()))
         }
     }
 

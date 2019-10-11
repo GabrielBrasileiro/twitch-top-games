@@ -4,7 +4,7 @@ import com.universodoandroid.remote.ApiDataSource
 import com.universodoandroid.remote.BuildConfig
 import com.universodoandroid.remote.domain.TopGamesApiDataSource
 import com.universodoandroid.remote.domain.TopGamesRemoteDataSource
-import com.universodoandroid.remote.games.TopGamesRemoteDataSourceImpl
+import com.universodoandroid.remote.data.TopGamesRemoteDataSourceImpl
 import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module
 
@@ -15,8 +15,4 @@ internal val remoteModule = module {
     factory<TopGamesRemoteDataSource> { TopGamesRemoteDataSourceImpl(get()) }
 }
 
-private val remoteModules = listOf(remoteModule)
-
-private val loadRemoteModules by lazy { loadKoinModules(remoteModules) }
-
-fun injectRemoteModules() = loadRemoteModules
+fun injectRemoteModule() = remoteModule

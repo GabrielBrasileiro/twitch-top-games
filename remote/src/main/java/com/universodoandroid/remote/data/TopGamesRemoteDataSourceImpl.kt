@@ -1,4 +1,4 @@
-package com.universodoandroid.remote.games
+package com.universodoandroid.remote.data
 
 import com.universodoandroid.core.domain.Game
 import com.universodoandroid.remote.BaseObserver
