@@ -1,7 +1,10 @@
 package com.universodoandroid.remote.model
 
+import com.google.gson.annotations.SerializedName
+
 data class GameResponse(
-    val _id: Int,
+    @SerializedName("_id")
+    val id: Int,
     val box: BoxResponse,
     val giantbombId: Int,
     val locale: String,

@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
 
@@ -29,6 +31,24 @@ dependencies {
 
     implementation project(':core')
     implementation project(':remote')
+
+    // Data Runtime
+    api "androidx.room:room-runtime:$room_version"
+
+    // Database
+    implementation "androidx.room:room-rxjava2:$room_version"
+    implementation "androidx.room:room-guava:$room_version"
+
+    // Reactive
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+
+    // Core
+    kapt "androidx.room:room-compiler:$room_version"
+
+    androidTestImplementation "androidx.test:runner:$android_test_runner"
+    androidTestImplementation "androidx.arch.core:core-testing:$core_testing_version"
+
+    testImplementation "androidx.room:room-testing:$room_version"
 
     //JUnit
     testImplementation "junit:junit:$junit_version"

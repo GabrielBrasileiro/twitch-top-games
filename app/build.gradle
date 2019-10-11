@@ -18,6 +18,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
@@ -29,6 +32,13 @@ dependencies {
     //UI
     implementation "androidx.appcompat:appcompat:$app_compat_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    implementation "com.google.android.material:material:$material_design_version"
+    implementation "com.squareup.picasso:picasso:$picasso_version"
+    implementation 'com.joooonho:selectableroundedimageview:1.0.1'
+
+    //Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:$navigation_fragment_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$navigation_ui_version"
 
     //JUnit
     testImplementation "junit:junit:$junit_version"
